@@ -1,9 +1,14 @@
 .container{
+    padding: 0 40px;
     background-color: #61dafb;
     height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .btn{
     border: none;
     outline: none;
     padding: 10px 30px 10px 30px;
 }
+
