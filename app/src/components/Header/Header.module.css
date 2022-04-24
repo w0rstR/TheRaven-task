@@ -1,0 +1,9 @@
+.container{
+    background-color: #61dafb;
+    height: 100px;
+}
+.btn{
+    border: none;
+    outline: none;
+    padding: 10px 30px 10px 30px;
+}
