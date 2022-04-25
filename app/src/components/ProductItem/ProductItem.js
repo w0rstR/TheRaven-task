@@ -1,14 +1,23 @@
 import s from "./ProductItem.module.css"
+import React, {useEffect} from 'react'
+import {useDispatch, useSelector} from "react-redux";
+import {setProduct} from "../../store/products/products.slice";
+export default function ProductItem({item}){
+    const dispatch = useDispatch();
 
-export default function ProductItem(){
+
+
+    const addToOrder=(data)=>{
+        dispatch(setProduct(data))
+    }
     return(
         <div className={s.container}>
             <div className={s.itemBody}>
-                <img className={s.img} src="https://images.unsplash.com/photo-1536304929831-ee1ca9d44906?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt=""/>
-                <h2 className={s.title}>title</h2>
-                <p className={s.decription}>Desc</p>
+                <img className={s.img} src={item.product_img} alt=""/>
+                <h2 className={s.title}>{item.product_title}</h2>
+                <p className={s.decription}>{item.product_about}</p>
             </div>
-            <button className={s.btn}>Add</button>
+            <button className={s.btn}onClick={()=>addToOrder({item})}>Add</button>
         </div>
     )
 }

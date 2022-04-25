@@ -1,0 +1,31 @@
+.wrap{
+    padding: 40px;
+    box-shadow: 0 2px 20px #a6a7b0;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btn{
+    border: none;
+    outline: none;
+    margin-top: 40px;
+    padding: 20px;
+    width: 100%;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.input{
+    min-width: 200px;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}

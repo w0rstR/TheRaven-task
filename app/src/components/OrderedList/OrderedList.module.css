@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+}
+.inputContainer{
+    width: 100%;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.items{
+    display: flex;
+    flex-direction: column;
+}
+.total{
+    display: flex;
+    justify-content: flex-start;
+    padding: 50px;
+    text-decoration: underline;
+    font-size: 30px;
+    font-weight: bold;
+}

@@ -1,5 +1,16 @@
+.wrap{
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
+
 .container{
     margin-top: 50px;
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;
+    gap: 50px;
+    border: 1px solid black;
 }
