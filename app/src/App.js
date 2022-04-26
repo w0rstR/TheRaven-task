@@ -7,8 +7,6 @@ import React, {useEffect} from 'react';
 
 
 function App() {
-
-
   return (
     <div className="App">
         <Routes>
