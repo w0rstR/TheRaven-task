@@ -1,16 +1,30 @@
 import s from './OrderedForm.module.css'
 import React from 'react'
+import {useForm} from 'react-hook-form';
+
+import firebaseApp from "../../services/ordered.database.service";
+import {useSelector} from "react-redux";
 export default function OrderedForm(){
+    const {handleSubmit, register, reset} = useForm()
+    const {orderProducts,price} = useSelector(state => state["productReducer"]);
+
+
+    const create = (data) => {
+        const db = firebaseApp.database()
+        db.ref('order').push({...data,...orderProducts,totalPrice:price})
+        reset()
+    }
+
     return (
         <div>
             <div className={s.container}>
-                <form>
+                <form onSubmit={handleSubmit(create)}>
                     <div className={s.wrap}>
                         <label className={s.inputContainer}>
-                            <input className={s.input} type="text" placeholder={'NAME'}/>
-                            <input className={s.input}  type="text" placeholder={'SURNAME'}/>
-                            <input className={s.input}  type="text" placeholder={'ADDRESS'}/>
-                            <input className={s.input}  type="text" placeholder={'PHONE'}/>
+                            <input className={s.input} type="text" placeholder={'NAME'} {...register('name',{required:true})}/>
+                            <input className={s.input}  type="text" placeholder={'SURNAME'} {...register('surname',{required:true})}/>
+                            <input className={s.input}  type="text" placeholder={'ADDRESS'} {...register('address',{required:true})}/>
+                            <input className={s.input}  type="number" placeholder={'PHONE'} {...register('phone',{required:true})}/>
                         </label>
                         <button className={s.btn}>ORDER</button>
                     </div>

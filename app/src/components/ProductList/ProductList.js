@@ -2,16 +2,18 @@ import ProductItem from "../ProductItem/ProductItem";
 import s from "./ProductList.module.css"
 import {useEffect, useState} from "react";
 import React from 'react'
-import productService from "../../services/product.service";
+
 import {useDispatch, useSelector} from "react-redux";
+//import db from '../../services/products.database.service'
+
 
 export default function ProductList(){
     const {orderProducts} = useSelector(state => state["productReducer"]);
-    const [products, setProduct] = useState()
+    const [products, setProduct] = useState([])
 
-    useEffect(   ()=>{
-        const data =  productService.getAllProducts().then(value => setProduct(value))
-    },[])
+    // useEffect(   ()=>{
+    //     db.collection('products').get().then(value => console.log(value))
+    // },[])
 
     useEffect(()=>{
         if(orderProducts.length>0){

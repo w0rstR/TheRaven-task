@@ -16,7 +16,9 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 export default function Header(){
-    const {count} = useSelector(state => state["productReducer"]);
+    const {orderProducts} = useSelector(state => state.productReducer);
+
+    const count = Object.values(orderProducts).length
 
     return(
         <div className={s.container}>

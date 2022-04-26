@@ -1,24 +1,37 @@
 import s from "./OrderedItem.module.css";
 import React from 'react'
-export default function OrderedItem(){
+import {useDispatch} from "react-redux";
+import {addProduct, deleteProduct} from "../../store/products/products.slice";
+export default function OrderedItem({item}){
+    const {product_img, product_title,product_about,count} = item;
+    const dispatch = useDispatch();
+
+
+    const add = ()=>{
+        dispatch(addProduct({item}))
+    }
+
+    const delroduct = ()=>{
+        dispatch(deleteProduct({item}))
+    }
     return(
         <div className={s.container}>
             <div className={s.imgBlock}>
-                <img className={s.img} src="https://images.unsplash.com/photo-1536304929831-ee1ca9d44906?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt=""/>
+                <img className={s.img} src={product_img} alt="Image"/>
             </div>
             <div className={s.secondBlock}>
                 <div className={s.description}>
-                    <h2 className={s.title}>Title of Item</h2>
-                    <p className={s.about}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <h2 className={s.title}>{product_title}</h2>
+                    <p className={s.about}>{product_about}</p>
                 </div>
                 <div className={s.block}>
-                    <button className={s.wrap}>
+                    <button className={s.wrap} onClick={delroduct}>
                         -
                     </button>
                     <div className={s.count}>
-                        1
+                        {count}
                     </div>
-                    <button className={s.wrap}>
+                    <button className={s.wrap} onClick={add}>
                         +
                     </button>
                 </div>

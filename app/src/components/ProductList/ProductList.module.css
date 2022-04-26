@@ -1,6 +1,5 @@
 .wrap{
     width: 100%;
-    border: 1px solid black;
     display: flex;
     justify-content: center;
 }
@@ -12,5 +11,4 @@
     justify-content: center;
     width: 70%;
     gap: 50px;
-    border: 1px solid black;
 }
