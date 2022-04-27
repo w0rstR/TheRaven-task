@@ -1,13 +1,13 @@
 {
   "main.css": "/TheRaven-task/static/css/main.fcc1a49a.chunk.css",
-  "main.js": "/TheRaven-task/static/js/main.5ec77a7b.chunk.js",
-  "main.js.map": "/TheRaven-task/static/js/main.5ec77a7b.chunk.js.map",
-  "static/js/1.7d518cc8.chunk.js": "/TheRaven-task/static/js/1.7d518cc8.chunk.js",
-  "static/js/1.7d518cc8.chunk.js.map": "/TheRaven-task/static/js/1.7d518cc8.chunk.js.map",
+  "main.js": "/TheRaven-task/static/js/main.3f6049e5.chunk.js",
+  "main.js.map": "/TheRaven-task/static/js/main.3f6049e5.chunk.js.map",
+  "static/js/1.4a5085bc.chunk.js": "/TheRaven-task/static/js/1.4a5085bc.chunk.js",
+  "static/js/1.4a5085bc.chunk.js.map": "/TheRaven-task/static/js/1.4a5085bc.chunk.js.map",
   "runtime~main.js": "/TheRaven-task/static/js/runtime~main.dae05675.js",
   "runtime~main.js.map": "/TheRaven-task/static/js/runtime~main.dae05675.js.map",
   "static/css/main.fcc1a49a.chunk.css.map": "/TheRaven-task/static/css/main.fcc1a49a.chunk.css.map",
   "index.html": "/TheRaven-task/index.html",
-  "precache-manifest.2577bd44b9a6e53d8d1dd3d3b8564bad.js": "/TheRaven-task/precache-manifest.2577bd44b9a6e53d8d1dd3d3b8564bad.js",
+  "precache-manifest.cf17f4f9b324b94aa96d741bce91ab85.js": "/TheRaven-task/precache-manifest.cf17f4f9b324b94aa96d741bce91ab85.js",
   "service-worker.js": "/TheRaven-task/service-worker.js"
 }

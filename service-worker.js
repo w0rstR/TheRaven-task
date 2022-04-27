@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/TheRaven-task/precache-manifest.2577bd44b9a6e53d8d1dd3d3b8564bad.js"
+  "/TheRaven-task/precache-manifest.cf17f4f9b324b94aa96d741bce91ab85.js"
 );
 
 workbox.clientsClaim();
