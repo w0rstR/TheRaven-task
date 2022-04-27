@@ -3,15 +3,18 @@ import React from 'react'
 import {useForm} from 'react-hook-form';
 
 import firebaseApp from "../../services/ordered.database.service";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import {resetOrder} from "../../store/products/products.slice";
 export default function OrderedForm(){
     const {handleSubmit, register, reset} = useForm()
     const {orderProducts,price} = useSelector(state => state["productReducer"]);
 
+    const dispatch = useDispatch();
 
     const create = (data) => {
         const db = firebaseApp.database()
         db.ref('order').push({...data,...orderProducts,totalPrice:price})
+        dispatch(resetOrder())
         reset()
     }
 

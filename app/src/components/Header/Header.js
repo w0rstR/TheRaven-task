@@ -16,7 +16,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 export default function Header(){
-    const {orderProducts} = useSelector(state => state.productReducer);
+    const {orderProducts,price} = useSelector(state => state.productReducer);
 
     const count = Object.values(orderProducts).length
 
@@ -24,13 +24,13 @@ export default function Header(){
         <div className={s.container}>
                 <div className={s.nav}>
                     <button className={s.btn}>
-                        <Link to={"/list"}>
-                            Cart
+                        <Link to={"/list"}  style={{ textDecoration: 'none' }}>
+                            <p className={s.btnInfo}>Cart</p>
                         </Link>
                     </button>
-                    <button className={s.btn}>
-                        <Link to={"/orderedList"}>
-                            Ordered List
+                    <button className={s.btn} >
+                        <Link to={"/orderedList"}  style={{ textDecoration: 'none' }}>
+                            <p className={s.btnInfo}>Ordered List</p>
                         </Link>
                     </button>
                 </div>
@@ -40,6 +40,9 @@ export default function Header(){
                             <ShoppingCartIcon />
                         </StyledBadge>
                     </IconButton>
+                    <div>
+                        TOTAL: {price}$
+                    </div>
                 </div>
         </div>
     )

@@ -16,3 +16,8 @@
     display: flex;
     gap: 20px;
 }
+.btnInfo{
+    font-size: 24px;
+    font-weight: bold;
+    color: dimgrey;
+}
